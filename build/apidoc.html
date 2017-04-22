@@ -1,0 +1,2465 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/wix/react-templates"
+
+    >react-templates (v0.6.1)</a>
+</h1>
+<h4>Light weight templates for react -> write html get valid react code</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-templates">module react-templates</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.convertStyle">
+            function <span class="apidocSignatureSpan">react-templates.</span>convertStyle
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.convertTemplateToReact">
+            function <span class="apidocSignatureSpan">react-templates.</span>convertTemplateToReact
+            <span class="apidocSignatureSpan">(html, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.execute">
+            function <span class="apidocSignatureSpan">react-templates.</span>execute
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.executeOptions">
+            function <span class="apidocSignatureSpan">react-templates.</span>executeOptions
+            <span class="apidocSignatureSpan">(currentOptions)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.handleSingleFile">
+            function <span class="apidocSignatureSpan">react-templates.</span>handleSingleFile
+            <span class="apidocSignatureSpan">(currentOptions, filename)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-templates.</span>RTCodeError</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-templates.</span>api</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-templates.</span>cli</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-templates.</span>context</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-templates.</span>fsUtil</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-templates.</span>options</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-templates.</span>reactSupport</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-templates.</span>reactTemplates</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-templates.</span>rtStyle</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-templates.</span>shell</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-templates.</span>utils</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-templates.RTCodeError">module react-templates.RTCodeError</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.RTCodeError.RTCodeError">
+            function <span class="apidocSignatureSpan">react-templates.</span>RTCodeError
+            <span class="apidocSignatureSpan">(message, startOffset, endOffset, line, column)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.RTCodeError.getNodeLoc">
+            function <span class="apidocSignatureSpan">react-templates.RTCodeError.</span>getNodeLoc
+            <span class="apidocSignatureSpan">(context, node)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-templates.api">module react-templates.api</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.api.convertFile">
+            function <span class="apidocSignatureSpan">react-templates.api.</span>convertFile
+            <span class="apidocSignatureSpan">(source, target, options, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-templates.api.</span>_test</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-templates.api.</span>context</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-templates.cli">module react-templates.cli</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.cli.convertStyle">
+            function <span class="apidocSignatureSpan">react-templates.cli.</span>convertStyle
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.cli.convertTemplateToReact">
+            function <span class="apidocSignatureSpan">react-templates.cli.</span>convertTemplateToReact
+            <span class="apidocSignatureSpan">(html, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.cli.execute">
+            function <span class="apidocSignatureSpan">react-templates.cli.</span>execute
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.cli.executeOptions">
+            function <span class="apidocSignatureSpan">react-templates.cli.</span>executeOptions
+            <span class="apidocSignatureSpan">(currentOptions)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.cli.handleSingleFile">
+            function <span class="apidocSignatureSpan">react-templates.cli.</span>handleSingleFile
+            <span class="apidocSignatureSpan">(currentOptions, filename)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-templates.cli.</span>context</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-templates.context">module react-templates.context</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">react-templates.context.</span>color</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.context.clear">
+            function <span class="apidocSignatureSpan">react-templates.context.</span>clear
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.context.error">
+            function <span class="apidocSignatureSpan">react-templates.context.</span>error
+            <span class="apidocSignatureSpan">(msg, file, line, column, startOffset, endOffset)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.context.getMessages">
+            function <span class="apidocSignatureSpan">react-templates.context.</span>getMessages
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.context.hasErrors">
+            function <span class="apidocSignatureSpan">react-templates.context.</span>hasErrors
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.context.info">
+            function <span class="apidocSignatureSpan">react-templates.context.</span>info
+            <span class="apidocSignatureSpan">(msg, file, line, column)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.context.issue">
+            function <span class="apidocSignatureSpan">react-templates.context.</span>issue
+            <span class="apidocSignatureSpan">(level, msg, file, line, column, startOffset, endOffset)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.context.report">
+            function <span class="apidocSignatureSpan">react-templates.context.</span>report
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.context.verbose">
+            function <span class="apidocSignatureSpan">react-templates.context.</span>verbose
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.context.warn">
+            function <span class="apidocSignatureSpan">react-templates.context.</span>warn
+            <span class="apidocSignatureSpan">(msg, file, line, column, startOffset, endOffset)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-templates.context.</span>MESSAGE_LEVEL</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-templates.context.</span>messages</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-templates.context.</span>options</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">react-templates.context.</span>cwd</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-templates.fsUtil">module react-templates.fsUtil</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.fsUtil.createRelativeReadFileSync">
+            function <span class="apidocSignatureSpan">react-templates.fsUtil.</span>createRelativeReadFileSync
+            <span class="apidocSignatureSpan">(baseFile)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.fsUtil.isStale">
+            function <span class="apidocSignatureSpan">react-templates.fsUtil.</span>isStale
+            <span class="apidocSignatureSpan">(source, target)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-templates.options">module react-templates.options</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.options.generateHelp">
+            function <span class="apidocSignatureSpan">react-templates.options.</span>generateHelp
+            <span class="apidocSignatureSpan">(arg$)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.options.generateHelpForOption">
+            function <span class="apidocSignatureSpan">react-templates.options.</span>generateHelpForOption
+            <span class="apidocSignatureSpan">(optionName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.options.parse">
+            function <span class="apidocSignatureSpan">react-templates.options.</span>parse
+            <span class="apidocSignatureSpan">(input, arg$)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.options.parseArgv">
+            function <span class="apidocSignatureSpan">react-templates.options.</span>parseArgv
+            <span class="apidocSignatureSpan">(it)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-templates.reactSupport">module react-templates.reactSupport</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.reactSupport.shouldUseCreateElement">
+            function <span class="apidocSignatureSpan">react-templates.reactSupport.</span>shouldUseCreateElement
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-templates.reactSupport.</span>attributesMapping</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-templates.reactSupport.</span>buildImport</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-templates.reactSupport.</span>htmlSelfClosingTags</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-templates.reactSupport.</span>templates</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">react-templates.reactSupport.</span>classNameProp</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-templates.reactTemplates">module react-templates.reactTemplates</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.reactTemplates.RTCodeError">
+            function <span class="apidocSignatureSpan">react-templates.reactTemplates.</span>RTCodeError
+            <span class="apidocSignatureSpan">(message, startOffset, endOffset, line, column)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.reactTemplates.convertJSRTToJS">
+            function <span class="apidocSignatureSpan">react-templates.reactTemplates.</span>convertJSRTToJS
+            <span class="apidocSignatureSpan">(text, reportContext, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.reactTemplates.convertRT">
+            function <span class="apidocSignatureSpan">react-templates.reactTemplates.</span>convertRT
+            <span class="apidocSignatureSpan">(html, reportContext, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.reactTemplates.convertTemplateToReact">
+            function <span class="apidocSignatureSpan">react-templates.reactTemplates.</span>convertTemplateToReact
+            <span class="apidocSignatureSpan">(html, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.reactTemplates.normalizeName">
+            function <span class="apidocSignatureSpan">react-templates.reactTemplates.</span>normalizeName
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-templates.rtStyle">module react-templates.rtStyle</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.rtStyle.convert">
+            function <span class="apidocSignatureSpan">react-templates.rtStyle.</span>convert
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.rtStyle.convertBody">
+            function <span class="apidocSignatureSpan">react-templates.rtStyle.</span>convertBody
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-templates.shell">module react-templates.shell</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.shell.printResults">
+            function <span class="apidocSignatureSpan">react-templates.shell.</span>printResults
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-templates.utils">module react-templates.utils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.utils.addIfMissing">
+            function <span class="apidocSignatureSpan">react-templates.utils.</span>addIfMissing
+            <span class="apidocSignatureSpan">(array, obj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.utils.concatChildren">
+            function <span class="apidocSignatureSpan">react-templates.utils.</span>concatChildren
+            <span class="apidocSignatureSpan">(children)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.utils.convertText">
+            function <span class="apidocSignatureSpan">react-templates.utils.</span>convertText
+            <span class="apidocSignatureSpan">(node, context, txt, normalizeWhitespaces)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.utils.isStringOnlyCode">
+            function <span class="apidocSignatureSpan">react-templates.utils.</span>isStringOnlyCode
+            <span class="apidocSignatureSpan">(txt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.utils.normalizeName">
+            function <span class="apidocSignatureSpan">react-templates.utils.</span>normalizeName
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.utils.usesScopeName">
+            function <span class="apidocSignatureSpan">react-templates.utils.</span>usesScopeName
+            <span class="apidocSignatureSpan">(scopeNames, node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.utils.validate">
+            function <span class="apidocSignatureSpan">react-templates.utils.</span>validate
+            <span class="apidocSignatureSpan">(options, context, reportContext, node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-templates.utils.validateJS">
+            function <span class="apidocSignatureSpan">react-templates.utils.</span>validateJS
+            <span class="apidocSignatureSpan">(code, node, context)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-templates" id="apidoc.module.react-templates">module react-templates</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.convertStyle" id="apidoc.element.react-templates.convertStyle">
+        function <span class="apidocSignatureSpan">react-templates.</span>convertStyle
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function convert(text) {
+    return templateCommonJSTemplate({ body: convertBody(text) });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.convertTemplateToReact" id="apidoc.element.react-templates.convertTemplateToReact">
+        function <span class="apidocSignatureSpan">react-templates.</span>convertTemplateToReact
+        <span class="apidocSignatureSpan">(html, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function convertTemplateToReact(html, options) {
+    var context = require(&#x27;./context&#x27;);
+    return convertRT(html, context, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.execute" id="apidoc.element.react-templates.execute">
+        function <span class="apidocSignatureSpan">react-templates.</span>execute
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function execute(args) {
+    try {
+        var currentOptions = options.parse(args);
+        return executeOptions(currentOptions);
+    } catch (error) {
+        console.error(error.message);
+        return 1;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+grunt.registerTask(&#x27;default&#x27;, [&#x27;eslint:all&#x27;]);
+grunt.registerTask(&#x27;lint&#x27;, [&#x27;eslint:all&#x27;]);
+grunt.registerTask(&#x27;test&#x27;, [&#x27;tape&#x27;]);
+
+grunt.registerTask(&#x27;rt&#x27;, () =&#x3e; {
+    const reactTemplates = require(&#x27;./src/cli&#x27;);
+    const files = grunt.file.expand(&#x27;playground/*.rt&#x27;);
+    const ret = reactTemplates.<span class="apidocCodeKeywordSpan">execute</span>({modules: &#x27;amd&#x27;, force: true, _: files
+});
+    return ret === 0;
+});
+
+grunt.registerTask(&#x27;build&#x27;, [&#x27;rt&#x27;, &#x27;browserify:pg&#x27;]);
+grunt.registerTask(&#x27;home&#x27;, [&#x27;rt&#x27;, &#x27;browserify:home&#x27;]);
+grunt.registerTask(&#x27;pgall&#x27;, [&#x27;rt&#x27;, &#x27;browserify&#x27;, &#x27;uglify&#x27;, &#x27;requirejs&#x27;]);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.executeOptions" id="apidoc.element.react-templates.executeOptions">
+        function <span class="apidocSignatureSpan">react-templates.</span>executeOptions
+        <span class="apidocSignatureSpan">(currentOptions)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function executeOptions(currentOptions) {
+    var ret = 0;
+    var files = currentOptions._;
+    context.options.format = currentOptions.format || &#x27;stylish&#x27;;
+
+    if (currentOptions.version) {
+        console.log(&#x27;v&#x27; + pkg.version);
+    } else if (currentOptions.help) {
+        if (files.length) {
+            console.log(options.generateHelpForOption(files[0]));
+        } else {
+            console.log(options.generateHelp());
+        }
+    } else if (currentOptions.listTargetVersion) {
+        printVersions(currentOptions);
+    } else if (files.length) {
+        // console.log(files);
+        // console.log(files.length);
+        // const allFiles = _.flatMap(files, f =&#x3e; {
+        //     const fp = path.resolve(context.cwd, f);
+        //     if (fs.statSync(fp).isDirectory()) {
+        //         // TODO: consider removing glob and simply walk the directory
+        //         return glob.sync(`${fp}/**/*.rt`, {cwd: context.cwd});
+        //     }
+        //     return fp;
+        // });
+        var allFiles = _.flatMap(files, function (f) {
+            return glob.sync(f, { cwd: context.cwd });
+        });
+        // console.log(allFiles.length);
+        _.forEach(allFiles, handleSingleFile.bind(this, currentOptions));
+        ret = shell.printResults(context);
+    } else {
+        console.log(options.generateHelp());
+    }
+    return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.handleSingleFile" id="apidoc.element.react-templates.handleSingleFile">
+        function <span class="apidocSignatureSpan">react-templates.</span>handleSingleFile
+        <span class="apidocSignatureSpan">(currentOptions, filename)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function handleSingleFile(currentOptions, filename) {
+    try {
+        var sourceExt = path.extname(filename);
+        var outputFilename = void 0;
+        if (sourceExt === &#x27;.rt&#x27;) {
+            outputFilename = filename + (currentOptions.modules === &#x27;typescript&#x27; ? &#x27;.ts&#x27; : &#x27;.js&#x27;);
+        } else if (sourceExt === &#x27;.jsrt&#x27;) {
+            outputFilename = filename.replace(/\.jsrt$/, &#x27;.js&#x27;);
+            currentOptions = _.assign({}, currentOptions, { modules: &#x27;jsrt&#x27; });
+        } else if (sourceExt === &#x27;.rts&#x27;) {
+            outputFilename = filename + &#x27;.js&#x27;;
+            currentOptions = _.assign({}, currentOptions, { modules: &#x27;rts&#x27; });
+        } else {
+            context.error(&#x27;invalid file, only handle rt/jsrt files&#x27;, filename);
+            return;
+        }
+        api.convertFile(filename, outputFilename, currentOptions, context);
+    } catch (e) {
+        context.error(e.message, filename, e.line, e.column, e.startOffset, e.endOffset);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-templates.RTCodeError" id="apidoc.module.react-templates.RTCodeError">module react-templates.RTCodeError</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.RTCodeError.RTCodeError" id="apidoc.element.react-templates.RTCodeError.RTCodeError">
+        function <span class="apidocSignatureSpan">react-templates.</span>RTCodeError
+        <span class="apidocSignatureSpan">(message, startOffset, endOffset, line, column)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class RTCodeError extends Error {
+    constructor(message, startOffset, endOffset, line, column) {
+        super();
+        Error.captureStackTrace(this, RTCodeError);
+        this.name = &#x27;RTCodeError&#x27;;
+        this.message = message || &#x27;&#x27;;
+        this.index = norm(startOffset);
+        this.startOffset = norm(startOffset);
+        this.endOffset = norm(endOffset);
+        this.line = norm(line);
+        this.column = norm(column);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.RTCodeError.getNodeLoc" id="apidoc.element.react-templates.RTCodeError.getNodeLoc">
+        function <span class="apidocSignatureSpan">react-templates.RTCodeError.</span>getNodeLoc
+        <span class="apidocSignatureSpan">(context, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getNodeLoc(context, node) {
+    const start = node.startIndex;
+    const pos = getLine(context.html, node);
+    let end;
+    if (node.data) {
+        end = start + node.data.length;
+    } else if (node.next) { // eslint-disable-line
+        end = node.next.startIndex;
+    } else {
+        end = context.html.length;
+    }
+    return {
+        pos,
+        start,
+        end
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param options
+ * @param {*} context
+ * @param {CONTEXT} reportContext
+ * @param node
+ */
+function validate(options, context, reportContext, node) {
+if (node.type === &#x27;tag&#x27; &#x26;&#x26; node.attribs[&#x27;rt-if&#x27;] &#x26;&#x26; !node.attribs.key) {
+    const loc = rtError.<span class="apidocCodeKeywordSpan">getNodeLoc</span>(context, node);
+    reportContext.warn(&#x27;rt-if without a key&#x27;, options.fileName, loc.pos.line, loc.pos.col, loc.start, loc.end);
+}
+if (node.type === &#x27;tag&#x27; &#x26;&#x26; node.attribs[&#x27;rt-require&#x27;] &#x26;&#x26; (node.attribs.dependency || node
+.attribs.as)) {
+    const loc = rtError.getNodeLoc(context, node);
+    reportContext.warn(&#x22;&#x27;rt-require&#x27; is obsolete, use &#x27;rt-import&#x27; instead&#x22;, options.fileName, loc.
+pos.line, loc.pos.col, loc.start, loc.end);
+}
+if (node.children) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-templates.api" id="apidoc.module.react-templates.api">module react-templates.api</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.api.convertFile" id="apidoc.element.react-templates.api.convertFile">
+        function <span class="apidocSignatureSpan">react-templates.api.</span>convertFile
+        <span class="apidocSignatureSpan">(source, target, options, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function convertFile(source, target, options, context) {
+    options = options || {};
+    options.fileName = source;
+
+    if (!options.force &#x26;&#x26; !fsUtil.isStale(source, target)) {
+        context.verbose(`target file ${chalk.cyan(target)} is up to date, skipping`);
+        return;
+    }
+
+    const html = fs.readFileSync(source).toString();
+    if (path.extname(source) === &#x27;.rts&#x27;) {
+        const rtStyle = require(&#x27;./rtStyle&#x27;);
+        const out = rtStyle.convert(html);
+        if (!options.dryRun) {
+            fs.writeFileSync(target, out);
+        }
+        return;
+    }
+    const modules = options.modules || &#x27;none&#x27;;
+    const shouldAddName = modules === &#x27;none&#x27; &#x26;&#x26; !options.name;
+    if (shouldAddName) {
+        options.name = reactTemplates.normalizeName(path.basename(source, path.extname(source))) + &#x27;RT&#x27;;
+    }
+    options.readFileSync = fsUtil.createRelativeReadFileSync(source);
+    const js = modules === &#x27;jsrt&#x27; ? convertJSRTToJS(html, context, options) : convertRT(html, context, options);
+    if (!options.dryRun) {
+        fs.writeFileSync(target, js);
+    }
+    if (shouldAddName) {
+        delete options.name;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+       } else if (sourceExt === &#x27;.rts&#x27;) {
+           outputFilename = filename + &#x27;.js&#x27;;
+           currentOptions = _.assign({}, currentOptions, {modules: &#x27;rts&#x27;});
+       } else {
+           context.error(&#x27;invalid file, only handle rt/jsrt files&#x27;, filename);
+           return;
+       }
+       api.<span class="apidocCodeKeywordSpan">convertFile</span>(filename, outputFilename, currentOptions, context);
+   } catch (e) {
+       context.error(e.message, filename, e.line, e.column, e.startOffset, e.endOffset);
+   }
+}
+
+/**
+* Executes the CLI based on an array of arguments that is passed in.
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-templates.cli" id="apidoc.module.react-templates.cli">module react-templates.cli</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.cli.convertStyle" id="apidoc.element.react-templates.cli.convertStyle">
+        function <span class="apidocSignatureSpan">react-templates.cli.</span>convertStyle
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function convert(text) {
+    return templateCommonJSTemplate({body: convertBody(text)});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.cli.convertTemplateToReact" id="apidoc.element.react-templates.cli.convertTemplateToReact">
+        function <span class="apidocSignatureSpan">react-templates.cli.</span>convertTemplateToReact
+        <span class="apidocSignatureSpan">(html, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function convertTemplateToReact(html, options) {
+    const context = require(&#x27;./context&#x27;);
+    return convertRT(html, context, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.cli.execute" id="apidoc.element.react-templates.cli.execute">
+        function <span class="apidocSignatureSpan">react-templates.cli.</span>execute
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function execute(args) {
+    try {
+        const currentOptions = options.parse(args);
+        return executeOptions(currentOptions);
+    } catch (error) {
+        console.error(error.message);
+        return 1;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+grunt.registerTask(&#x27;default&#x27;, [&#x27;eslint:all&#x27;]);
+grunt.registerTask(&#x27;lint&#x27;, [&#x27;eslint:all&#x27;]);
+grunt.registerTask(&#x27;test&#x27;, [&#x27;tape&#x27;]);
+
+grunt.registerTask(&#x27;rt&#x27;, () =&#x3e; {
+    const reactTemplates = require(&#x27;./src/cli&#x27;);
+    const files = grunt.file.expand(&#x27;playground/*.rt&#x27;);
+    const ret = reactTemplates.<span class="apidocCodeKeywordSpan">execute</span>({modules: &#x27;amd&#x27;, force: true, _: files
+});
+    return ret === 0;
+});
+
+grunt.registerTask(&#x27;build&#x27;, [&#x27;rt&#x27;, &#x27;browserify:pg&#x27;]);
+grunt.registerTask(&#x27;home&#x27;, [&#x27;rt&#x27;, &#x27;browserify:home&#x27;]);
+grunt.registerTask(&#x27;pgall&#x27;, [&#x27;rt&#x27;, &#x27;browserify&#x27;, &#x27;uglify&#x27;, &#x27;requirejs&#x27;]);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.cli.executeOptions" id="apidoc.element.react-templates.cli.executeOptions">
+        function <span class="apidocSignatureSpan">react-templates.cli.</span>executeOptions
+        <span class="apidocSignatureSpan">(currentOptions)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function executeOptions(currentOptions) {
+    let ret = 0;
+    const files = currentOptions._;
+    context.options.format = currentOptions.format || &#x27;stylish&#x27;;
+
+    if (currentOptions.version) {
+        console.log(`v${pkg.version}`);
+    } else if (currentOptions.help) {
+        if (files.length) {
+            console.log(options.generateHelpForOption(files[0]));
+        } else {
+            console.log(options.generateHelp());
+        }
+    } else if (currentOptions.listTargetVersion) {
+        printVersions(currentOptions);
+    } else if (files.length) {
+        // console.log(files);
+        // console.log(files.length);
+        // const allFiles = _.flatMap(files, f =&#x3e; {
+        //     const fp = path.resolve(context.cwd, f);
+        //     if (fs.statSync(fp).isDirectory()) {
+        //         // TODO: consider removing glob and simply walk the directory
+        //         return glob.sync(`${fp}/**/*.rt`, {cwd: context.cwd});
+        //     }
+        //     return fp;
+        // });
+        const allFiles = _.flatMap(files, f =&#x3e; glob.sync(f, {cwd: context.cwd}));
+        // console.log(allFiles.length);
+        _.forEach(allFiles, handleSingleFile.bind(this, currentOptions));
+        ret = shell.printResults(context);
+    } else {
+        console.log(options.generateHelp());
+    }
+    return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.cli.handleSingleFile" id="apidoc.element.react-templates.cli.handleSingleFile">
+        function <span class="apidocSignatureSpan">react-templates.cli.</span>handleSingleFile
+        <span class="apidocSignatureSpan">(currentOptions, filename)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function handleSingleFile(currentOptions, filename) {
+    try {
+        const sourceExt = path.extname(filename);
+        let outputFilename;
+        if (sourceExt === &#x27;.rt&#x27;) {
+            outputFilename = filename + (currentOptions.modules === &#x27;typescript&#x27; ? &#x27;.ts&#x27; : &#x27;.js&#x27;);
+        } else if (sourceExt === &#x27;.jsrt&#x27;) {
+            outputFilename = filename.replace(/\.jsrt$/, &#x27;.js&#x27;);
+            currentOptions = _.assign({}, currentOptions, {modules: &#x27;jsrt&#x27;});
+        } else if (sourceExt === &#x27;.rts&#x27;) {
+            outputFilename = filename + &#x27;.js&#x27;;
+            currentOptions = _.assign({}, currentOptions, {modules: &#x27;rts&#x27;});
+        } else {
+            context.error(&#x27;invalid file, only handle rt/jsrt files&#x27;, filename);
+            return;
+        }
+        api.convertFile(filename, outputFilename, currentOptions, context);
+    } catch (e) {
+        context.error(e.message, filename, e.line, e.column, e.startOffset, e.endOffset);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-templates.context" id="apidoc.module.react-templates.context">module react-templates.context</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.context.clear" id="apidoc.element.react-templates.context.clear">
+        function <span class="apidocSignatureSpan">react-templates.context.</span>clear
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function clear() {
+    context.messages = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.context.error" id="apidoc.element.react-templates.context.error">
+        function <span class="apidocSignatureSpan">react-templates.context.</span>error
+        <span class="apidocSignatureSpan">(msg, file, line, column, startOffset, endOffset)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function error(msg, file, line, column, startOffset, endOffset) {
+    context.issue(MESSAGE_LEVEL.ERROR, msg, file, line, column, startOffset, endOffset);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        } else if (sourceExt === &#x27;.jsrt&#x27;) {
+            outputFilename = filename.replace(/\.jsrt$/, &#x27;.js&#x27;);
+            currentOptions = _.assign({}, currentOptions, {modules: &#x27;jsrt&#x27;});
+        } else if (sourceExt === &#x27;.rts&#x27;) {
+            outputFilename = filename + &#x27;.js&#x27;;
+            currentOptions = _.assign({}, currentOptions, {modules: &#x27;rts&#x27;});
+        } else {
+            context.<span class="apidocCodeKeywordSpan">error</span>(&#x27;invalid file, only handle rt/jsrt files&#x27;, filename
+);
+            return;
+        }
+        api.convertFile(filename, outputFilename, currentOptions, context);
+    } catch (e) {
+        context.error(e.message, filename, e.line, e.column, e.startOffset, e.endOffset);
+    }
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.context.getMessages" id="apidoc.element.react-templates.context.getMessages">
+        function <span class="apidocSignatureSpan">react-templates.context.</span>getMessages
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getMessages() {
+    return context.messages;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+const _ = require(&#x27;lodash&#x27;);
+
+/**
+ * @param {CONTEXT} context
+ * @return {number}
+ */
+function printResults(context) {
+    const warnings = context.<span class="apidocCodeKeywordSpan">getMessages</span>();
+    const out = require(`./formatters/${context.options.format}`)(warnings);
+    context.report(out);
+    const grouped = _.groupBy(warnings, &#x27;level&#x27;);
+    return grouped.ERROR ? grouped.ERROR.length : 0;
+}
+
+module.exports = {printResults};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.context.hasErrors" id="apidoc.element.react-templates.context.hasErrors">
+        function <span class="apidocSignatureSpan">react-templates.context.</span>hasErrors
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function hasErrors() {
+    return _.some(context.messages, { level: MESSAGE_LEVEL.ERROR });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.context.info" id="apidoc.element.react-templates.context.info">
+        function <span class="apidocSignatureSpan">react-templates.context.</span>info
+        <span class="apidocSignatureSpan">(msg, file, line, column)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function info(msg, file, line, column) {
+    context.issue(MESSAGE_LEVEL.INFO, msg, file, line, column);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.context.issue" id="apidoc.element.react-templates.context.issue">
+        function <span class="apidocSignatureSpan">react-templates.context.</span>issue
+        <span class="apidocSignatureSpan">(level, msg, file, line, column, startOffset, endOffset)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function issue(level, msg, file, line, column, startOffset, endOffset) {
+    context.messages.push({ level: level, msg: msg, file: file || null, line: norm(line), column: norm(column), index: norm(startOffset
+), startOffset: norm(startOffset), endOffset: norm(endOffset) });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+},
+verbose(msg) {
+    if (context.options.verbose) {
+        console.log(msg);
+    }
+},
+info(msg, file, line, column) {
+    context.<span class="apidocCodeKeywordSpan">issue</span>(MESSAGE_LEVEL.INFO, msg, file, line, column);
+},
+warn(msg, file, line, column, startOffset, endOffset) {
+    context.issue(MESSAGE_LEVEL.WARN, msg, file, line, column, startOffset, endOffset);
+},
+error(msg, file, line, column, startOffset, endOffset) {
+    context.issue(MESSAGE_LEVEL.ERROR, msg, file, line, column, startOffset, endOffset);
+},
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.context.report" id="apidoc.element.react-templates.context.report">
+        function <span class="apidocSignatureSpan">react-templates.context.</span>report
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function report(msg) {
+    console.log(msg);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+ * @param {CONTEXT} context
+ * @return {number}
+ */
+function printResults(context) {
+    const warnings = context.getMessages();
+    const out = require(`./formatters/${context.options.format}`)(warnings);
+    context.<span class="apidocCodeKeywordSpan">report</span>(out);
+    const grouped = _.groupBy(warnings, &#x27;level&#x27;);
+    return grouped.ERROR ? grouped.ERROR.length : 0;
+}
+
+module.exports = {printResults};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.context.verbose" id="apidoc.element.react-templates.context.verbose">
+        function <span class="apidocSignatureSpan">react-templates.context.</span>verbose
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function verbose(msg) {
+    if (context.options.verbose) {
+        console.log(msg);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {CONTEXT} context
+ */
+function convertFile(source, target, options, context) {
+options = options || {};
+options.fileName = source;
+
+if (!options.force &#x26;&#x26; !fsUtil.isStale(source, target)) {
+    context.<span class="apidocCodeKeywordSpan">verbose</span>(`target file ${chalk.cyan(target)} is up to date, skipping`);
+    return;
+}
+
+const html = fs.readFileSync(source).toString();
+if (path.extname(source) === &#x27;.rts&#x27;) {
+    const rtStyle = require(&#x27;./rtStyle&#x27;);
+    const out = rtStyle.convert(html);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.context.warn" id="apidoc.element.react-templates.context.warn">
+        function <span class="apidocSignatureSpan">react-templates.context.</span>warn
+        <span class="apidocSignatureSpan">(msg, file, line, column, startOffset, endOffset)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function warn(msg, file, line, column, startOffset, endOffset) {
+    context.issue(MESSAGE_LEVEL.WARN, msg, file, line, column, startOffset, endOffset);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {*} context
+ * @param {CONTEXT} reportContext
+ * @param node
+ */
+function validate(options, context, reportContext, node) {
+if (node.type === &#x27;tag&#x27; &#x26;&#x26; node.attribs[&#x27;rt-if&#x27;] &#x26;&#x26; !node.attribs.key) {
+    const loc = rtError.getNodeLoc(context, node);
+    reportContext.<span class="apidocCodeKeywordSpan">warn</span>(&#x27;rt-if without a key&#x27;, options.fileName, loc.pos.line
+, loc.pos.col, loc.start, loc.end);
+}
+if (node.type === &#x27;tag&#x27; &#x26;&#x26; node.attribs[&#x27;rt-require&#x27;] &#x26;&#x26; (node.attribs.dependency || node
+.attribs.as)) {
+    const loc = rtError.getNodeLoc(context, node);
+    reportContext.warn(&#x22;&#x27;rt-require&#x27; is obsolete, use &#x27;rt-import&#x27; instead&#x22;, options.fileName, loc.
+pos.line, loc.pos.col, loc.start, loc.end);
+}
+if (node.children) {
+    node.children.forEach(validate.bind(this, options, context, reportContext));
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-templates.fsUtil" id="apidoc.module.react-templates.fsUtil">module react-templates.fsUtil</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.fsUtil.createRelativeReadFileSync" id="apidoc.element.react-templates.fsUtil.createRelativeReadFileSync">
+        function <span class="apidocSignatureSpan">react-templates.fsUtil.</span>createRelativeReadFileSync
+        <span class="apidocSignatureSpan">(baseFile)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createRelativeReadFileSync(baseFile) {
+    const basePath = path.dirname(baseFile);
+    return filename =&#x3e; fs.readFileSync(path.resolve(basePath, filename));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    return;
+}
+const modules = options.modules || &#x27;none&#x27;;
+const shouldAddName = modules === &#x27;none&#x27; &#x26;&#x26; !options.name;
+if (shouldAddName) {
+    options.name = reactTemplates.normalizeName(path.basename(source, path.extname(source))) + &#x27;RT&#x27;;
+}
+options.readFileSync = fsUtil.<span class="apidocCodeKeywordSpan">createRelativeReadFileSync</span>(source);
+const js = modules === &#x27;jsrt&#x27; ? convertJSRTToJS(html, context, options) : convertRT(html, context, options);
+if (!options.dryRun) {
+    fs.writeFileSync(target, js);
+}
+if (shouldAddName) {
+    delete options.name;
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.fsUtil.isStale" id="apidoc.element.react-templates.fsUtil.isStale">
+        function <span class="apidocSignatureSpan">react-templates.fsUtil.</span>isStale
+        <span class="apidocSignatureSpan">(source, target)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isStale(source, target) {
+    if (!fs.existsSync(target)) {
+        return true;
+    }
+    const sourceTime = fs.statSync(source).mtime;
+    const targetTime = fs.statSync(target).mtime;
+    return sourceTime.getTime() &#x3e; targetTime.getTime();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {Options} options
+ * @param {CONTEXT} context
+ */
+function convertFile(source, target, options, context) {
+options = options || {};
+options.fileName = source;
+
+if (!options.force &#x26;&#x26; !fsUtil.<span class="apidocCodeKeywordSpan">isStale</span>(source, target)) {
+    context.verbose(`target file ${chalk.cyan(target)} is up to date, skipping`);
+    return;
+}
+
+const html = fs.readFileSync(source).toString();
+if (path.extname(source) === &#x27;.rts&#x27;) {
+    const rtStyle = require(&#x27;./rtStyle&#x27;);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-templates.options" id="apidoc.module.react-templates.options">module react-templates.options</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.options.generateHelp" id="apidoc.element.react-templates.options.generateHelp">
+        function <span class="apidocSignatureSpan">react-templates.options.</span>generateHelp
+        <span class="apidocSignatureSpan">(arg$)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generateHelp = function (arg$){
+  var ref$, showHidden, interpolate, maxWidth, output, out, data, optionCount, totalPreLen, preLens, i$, len$, item, that, pre,
+descParts, desc, preLen, sortedPreLens, maxPreLen, preLenMean, x, padAmount, descSepLen, fullWrapCount, partialWrapCount, descLen
+, totalLen, initialSpace, wrapAllFull, i, wrap;
+  ref$ = arg$ != null
+    ? arg$
+    : {}, showHidden = ref$.showHidden, interpolate = ref$.interpolate;
+  maxWidth = stdout != null &#x26;&#x26; stdout.isTTY ? stdout.columns - 1 : null;
+  output = [];
+  out = function(it){
+    return output.push(it != null ? it : &#x27;&#x27;);
+  };
+  if (prepend) {
+    out(interpolate ? interp(prepend, interpolate) : prepend);
+    out();
+  }
+  data = [];
+  optionCount = 0;
+  totalPreLen = 0;
+  preLens = [];
+  for (i$ = 0, len$ = (ref$ = options).length; i$ &#x3c; len$; ++i$) {
+    item = ref$[i$];
+    if (showHidden || !item.hidden) {
+      if (that = item.heading) {
+        data.push({
+          type: &#x27;heading&#x27;,
+          value: that
+        });
+      } else {
+        pre = getPreText(item, helpStyle, maxWidth);
+        descParts = [];
+        if ((that = item.description) != null) {
+          descParts.push(that);
+        }
+        if (that = item[&#x27;enum&#x27;]) {
+          descParts.push(&#x22;either: &#x22; + naturalJoin(that));
+        }
+        if (item[&#x27;default&#x27;] &#x26;&#x26; !item.negateName) {
+          descParts.push(&#x22;default: &#x22; + item[&#x27;default&#x27;]);
+        }
+        desc = descParts.join(&#x27; - &#x27;);
+        data.push({
+          type: &#x27;option&#x27;,
+          pre: pre,
+          desc: desc,
+          descLen: desc.length
+        });
+        preLen = pre.length;
+        optionCount++;
+        totalPreLen += preLen;
+        preLens.push(preLen);
+      }
+    }
+  }
+  sortedPreLens = sort(preLens);
+  maxPreLen = sortedPreLens[sortedPreLens.length - 1];
+  preLenMean = initialIndent + totalPreLen / optionCount;
+  x = optionCount &#x3e; 2 ? min(preLenMean * maxPadFactor, maxPreLen) : maxPreLen;
+  for (i$ = sortedPreLens.length - 1; i$ &#x3e;= 0; --i$) {
+    preLen = sortedPreLens[i$];
+    if (preLen &#x3c;= x) {
+      padAmount = preLen;
+      break;
+    }
+  }
+  descSepLen = descriptionSeparator.length;
+  if (maxWidth != null) {
+    fullWrapCount = 0;
+    partialWrapCount = 0;
+    for (i$ = 0, len$ = data.length; i$ &#x3c; len$; ++i$) {
+      item = data[i$];
+      if (item.type === &#x27;option&#x27;) {
+        pre = item.pre, desc = item.desc, descLen = item.descLen;
+        if (descLen === 0) {
+          item.wrap = &#x27;none&#x27;;
+        } else {
+          preLen = max(padAmount, pre.length) + initialIndent + descSepLen;
+          totalLen = preLen + descLen;
+          if (totalLen &#x3e; maxWidth) {
+            if (descLen / 2.5 &#x3e; maxWidth - preLen) {
+              fullWrapCount++;
+              item.wrap = &#x27;full&#x27;;
+            } else {
+              partialWrapCount++;
+              item.wrap = &#x27;partial&#x27;;
+            }
+          } else {
+            item.wrap = &#x27;none&#x27;;
+          }
+        }
+      }
+    }
+  }
+  initialSpace = repeatString$(&#x27; &#x27;, initialIndent);
+  wrapAllFull = optionCount &#x3e; 1 &#x26;&#x26; fullWrapCount + partialWrapCount * 0.5 &#x3e; optionCount * 0.5;
+  for (i$ = 0, len$ = data.length; i$ &#x3c; len$; ++i$) {
+    i = i$;
+    item = data[i$];
+    if (item.type === &#x27;heading&#x27;) {
+      if (i !== 0) {
+        out();
+      }
+      out(item.value + &#x22;:&#x22;);
+    } else {
+      pre = item.pre, desc = item.desc, descLen = item.descLen, wrap = item.wrap;
+      if (maxWidth != null) {
+        if (wrapAllFull || wrap === &#x27;full&#x27;) {
+          wrap = wordwrap(initialIndent + secondaryIndent, maxWidth);
+          out(initialSpace + &#x22;&#x22; + pre + &#x22;\n&#x22; + wrap(desc));
+          continue;
+        } else if (wrap === &#x27;partial&#x27;) {
+          wrap = wordwrap(initialIndent + descSepLen + max(padAmount, pre.length), maxWidth);
+          out(initialSpace + &#x22;&#x22; + pad(pre, padAmount) + descriptionSeparator + wrap(desc).replace(/^\s+/, &#x27;&#x27;));
+          continue;
+        }
+      }
+      if (descLen === 0) {
+        out(initialSpace + &#x22;&#x22; + pre);
+      } else {
+        out(initialSpace + &#x22;&#x22; + pad(pre, padAmount) + descriptionSeparator + desc);
+      }
+    }
+  }
+  if (append) {
+    out();
+    out(interpola ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+if (currentOptions.version) {
+    console.log(`v${pkg.version}`);
+} else if (currentOptions.help) {
+    if (files.length) {
+        console.log(options.generateHelpForOption(files[0]));
+    } else {
+        console.log(options.<span class="apidocCodeKeywordSpan">generateHelp</span>());
+    }
+} else if (currentOptions.listTargetVersion) {
+    printVersions(currentOptions);
+} else if (files.length) {
+    // console.log(files);
+    // console.log(files.length);
+    // const allFiles = _.flatMap(files, f =&#x3e; {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.options.generateHelpForOption" id="apidoc.element.react-templates.options.generateHelpForOption">
+        function <span class="apidocSignatureSpan">react-templates.options.</span>generateHelpForOption
+        <span class="apidocSignatureSpan">(optionName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generateHelpForOption = function (optionName){
+  var maxWidth, wrap, option, e, pre, defaultString, restPositionalString, description, fullDescription, that, preDescription, descriptionString
+, exampleString, examples, seperator;
+  maxWidth = stdout != null &#x26;&#x26; stdout.isTTY ? stdout.columns - 1 : null;
+  wrap = maxWidth ? wordwrap(maxWidth) : id;
+  try {
+    option = getOption(dasherize(optionName));
+  } catch (e$) {
+    e = e$;
+    return e.message;
+  }
+  pre = getPreText(option, helpStyle);
+  defaultString = option[&#x27;default&#x27;] &#x26;&#x26; !option.negateName ? &#x22;\ndefault: &#x22; + option[&#x27;default&#x27;] : &#x27;&#x27;;
+  restPositionalString = option.restPositional ? &#x27;Everything after this option is considered a positional argument, even if it looks
+ like an option.&#x27; : &#x27;&#x27;;
+  description = option.longDescription || option.description &#x26;&#x26; sentencize(option.description);
+  fullDescription = description &#x26;&#x26; restPositionalString
+    ? description + &#x22; &#x22; + restPositionalString
+    : (that = description || restPositionalString) ? that : &#x27;&#x27;;
+  preDescription = &#x27;description:&#x27;;
+  descriptionString = !fullDescription
+    ? &#x27;&#x27;
+    : maxWidth &#x26;&#x26; fullDescription.length - 1 - preDescription.length &#x3e; maxWidth
+      ? &#x22;\n&#x22; + preDescription + &#x22;\n&#x22; + wrap(fullDescription)
+      : &#x22;\n&#x22; + preDescription + &#x22; &#x22; + fullDescription;
+  exampleString = (that = option.example) ? (examples = [].concat(that), examples.length &#x3e; 1
+    ? &#x22;\nexamples:\n&#x22; + unlines(examples)
+    : &#x22;\nexample: &#x22; + examples[0]) : &#x27;&#x27;;
+  seperator = defaultString || descriptionString || exampleString ? &#x22;\n&#x22; + repeatString$(&#x27;=&#x27;, pre.length) : &#x27;&#x27;;
+  return pre + &#x22;&#x22; + seperator + defaultString + descriptionString + exampleString;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+const files = currentOptions._;
+context.options.format = currentOptions.format || &#x27;stylish&#x27;;
+
+if (currentOptions.version) {
+    console.log(`v${pkg.version}`);
+} else if (currentOptions.help) {
+    if (files.length) {
+        console.log(options.<span class="apidocCodeKeywordSpan">generateHelpForOption</span>(files[0]));
+    } else {
+        console.log(options.generateHelp());
+    }
+} else if (currentOptions.listTargetVersion) {
+    printVersions(currentOptions);
+} else if (files.length) {
+    // console.log(files);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.options.parse" id="apidoc.element.react-templates.options.parse">
+        function <span class="apidocSignatureSpan">react-templates.options.</span>parse
+        <span class="apidocSignatureSpan">(input, arg$)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parse = function (input, arg$){
+  var slice, obj, positional, restPositional, overrideRequired, prop, setValue, setDefaults, checkRequired, mutuallyExclusiveError
+, checkMutuallyExclusive, checkDependency, checkDependencies, checkProp, args, key, value, option, ref$, i$, len$, arg, that, result
+, short, argName, usingAssign, val, flags, len, j$, len1$, i, flag, opt, name, valPrime, negated, noedName;
+  slice = (arg$ != null
+    ? arg$
+    : {}).slice;
+  obj = {};
+  positional = [];
+  restPositional = false;
+  overrideRequired = false;
+  prop = null;
+  setValue = function(name, value){
+    var opt, val, cra, e, currentType;
+    opt = getOption(name);
+    if (opt.boolean) {
+      val = value;
+    } else {
+      try {
+        cra = opt.concatRepeatedArrays;
+        if (cra != null &#x26;&#x26; cra[0] &#x26;&#x26; cra[1].oneValuePerFlag &#x26;&#x26; opt.parsedType.length === 1 &#x26;&#x26; opt.parsedType[0].structure === &#x27;array
+&#x27;) {
+          val = [parseLevn(opt.parsedType[0].of, value)];
+        } else {
+          val = parseLevn(opt.parsedType, value);
+        }
+      } catch (e$) {
+        e = e$;
+        throw new Error(&#x22;Invalid value for option &#x27;&#x22; + name + &#x22;&#x27; - expected type &#x22; + opt.type + &#x22;, received value: &#x22; + value + &#x22;.&#x22;);
+      }
+      if (opt[&#x27;enum&#x27;] &#x26;&#x26; !any(function(it){
+        return deepIs(it, val);
+      }, opt.parsedPossibilities)) {
+        throw new Error(&#x22;Option &#x22; + name + &#x22;: &#x27;&#x22; + val + &#x22;&#x27; not one of &#x22; + naturalJoin(opt[&#x27;enum&#x27;]) + &#x22;.&#x22;);
+      }
+    }
+    currentType = toString$.call(obj[name]).slice(8, -1);
+    if (obj[name] != null) {
+      if (opt.concatRepeatedArrays != null &#x26;&#x26; opt.concatRepeatedArrays[0] &#x26;&#x26; currentType === &#x27;Array&#x27;) {
+        obj[name] = obj[name].concat(val);
+      } else if (opt.mergeRepeatedObjects &#x26;&#x26; currentType === &#x27;Object&#x27;) {
+        import$(obj[name], val);
+      } else {
+        obj[name] = val;
+      }
+    } else {
+      obj[name] = val;
+    }
+    if (opt.restPositional) {
+      restPositional = true;
+    }
+    if (opt.overrideRequired) {
+      overrideRequired = true;
+    }
+  };
+  setDefaults = function(){
+    var name, ref$, value;
+    for (name in ref$ = defaults) {
+      value = ref$[name];
+      if (obj[name] == null) {
+        obj[name] = value;
+      }
+    }
+  };
+  checkRequired = function(){
+    var i$, ref$, len$, name;
+    if (overrideRequired) {
+      return;
+    }
+    for (i$ = 0, len$ = (ref$ = required).length; i$ &#x3c; len$; ++i$) {
+      name = ref$[i$];
+      if (!obj[name]) {
+        throw new Error(&#x22;Option &#x22; + nameToRaw(name) + &#x22; is required.&#x22;);
+      }
+    }
+  };
+  mutuallyExclusiveError = function(first, second){
+    throw new Error(&#x22;The options &#x22; + nameToRaw(first) + &#x22; and &#x22; + nameToRaw(second) + &#x22; are mutually exclusive - you cannot use
+them at the same time.&#x22;);
+  };
+  checkMutuallyExclusive = function(){
+    var rules, i$, len$, rule, present, j$, len1$, element, k$, len2$, opt;
+    rules = libOptions.mutuallyExclusive;
+    if (!rules) {
+      return;
+    }
+    for (i$ = 0, len$ = rules.length; i$ &#x3c; len$; ++i$) {
+      rule = rules[i$];
+      present = null;
+      for (j$ = 0, len1$ = rule.length; j$ &#x3c; len1$; ++j$) {
+        element = rule[j$];
+        if (toString$.call(element).slice(8, -1) === &#x27;Array&#x27;) {
+          for (k$ = 0, len2$ = element.length; k$ &#x3c; len2$; ++k$) {
+            opt = element[k$];
+            if (opt in obj) {
+              if (present != null) {
+                mutuallyExclusiveError(present, opt);
+              } else {
+                present = opt;
+                break;
+              }
+            }
+          }
+        } else {
+          if (element in obj) {
+            if (present != null) {
+              mutuallyExclusiveError(present, element);
+            } else {
+              present = element;
+            }
+          }
+        }
+      }
+    }
+  };
+  checkDependency = function(option){
+    var dependsOn, type, targetOptionNames, i$, len$, targetOptionName, targetOption;
+    dependsOn = option.dependsOn;
+    if (!dependsOn || option.dependenciesMet) {
+      return true;
+    }
+    type = dependsOn[0], targetOptionNames = slice$.call(dependsOn, 1);
+    for (i$ = 0, len$ = ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+ * Executes the CLI based on an array of arguments that is passed in.
+ * @param {string|Array|Object} args The arguments to process.
+ * @returns {int} The exit code for the operation.
+ */
+function execute(args) {
+    try {
+        const currentOptions = options.<span class="apidocCodeKeywordSpan">parse</span>(args);
+        return executeOptions(currentOptions);
+    } catch (error) {
+        console.error(error.message);
+        return 1;
+    }
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.options.parseArgv" id="apidoc.element.react-templates.options.parseArgv">
+        function <span class="apidocSignatureSpan">react-templates.options.</span>parseArgv
+        <span class="apidocSignatureSpan">(it)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parseArgv = function (it){
+  return parse(it, {
+    slice: 2
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-templates.reactSupport" id="apidoc.module.react-templates.reactSupport">module react-templates.reactSupport</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.reactSupport.shouldUseCreateElement" id="apidoc.element.react-templates.reactSupport.shouldUseCreateElement">
+        function <span class="apidocSignatureSpan">react-templates.reactSupport.</span>shouldUseCreateElement
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function shouldUseCreateElement(context) {
+    switch (context.options.targetVersion) {
+        case &#x27;0.11.2&#x27;:
+        case &#x27;0.11.1&#x27;:
+        case &#x27;0.11.0&#x27;:
+        case &#x27;0.10.0&#x27;:
+            return false;
+        default:
+            return true;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ */
+function convertTagNameToConstructor(tagName, context) {
+    if (context.options.native) {
+        const targetSupport = reactNativeSupport[context.options.nativeTargetVersion];
+        return _.includes(targetSupport.components, tagName) ? `${targetSupport.reactNative.name}.${tagName}` : tagName;
+    }
+    let isHtmlTag = _.includes(reactDOMSupport[context.options.targetVersion], tagName) || isCustomElement(tagName);
+    if (reactSupport.<span class="apidocCodeKeywordSpan">shouldUseCreateElement</span>(context)) {
+        isHtmlTag = isHtmlTag || tagName.match(/^\w+(-\w+)+$/);
+        return isHtmlTag ? `&#x27;${tagName}&#x27;` : tagName;
+    }
+    return isHtmlTag ? `React.DOM.${tagName}` : tagName;
+}
+
+function isCustomElement(tagName) {
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-templates.reactTemplates" id="apidoc.module.react-templates.reactTemplates">module react-templates.reactTemplates</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.reactTemplates.RTCodeError" id="apidoc.element.react-templates.reactTemplates.RTCodeError">
+        function <span class="apidocSignatureSpan">react-templates.reactTemplates.</span>RTCodeError
+        <span class="apidocSignatureSpan">(message, startOffset, endOffset, line, column)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class RTCodeError extends Error {
+    constructor(message, startOffset, endOffset, line, column) {
+        super();
+        Error.captureStackTrace(this, RTCodeError);
+        this.name = &#x27;RTCodeError&#x27;;
+        this.message = message || &#x27;&#x27;;
+        this.index = norm(startOffset);
+        this.startOffset = norm(startOffset);
+        this.endOffset = norm(endOffset);
+        this.line = norm(line);
+        this.column = norm(column);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.reactTemplates.convertJSRTToJS" id="apidoc.element.react-templates.reactTemplates.convertJSRTToJS">
+        function <span class="apidocSignatureSpan">react-templates.reactTemplates.</span>convertJSRTToJS
+        <span class="apidocSignatureSpan">(text, reportContext, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function convertJSRTToJS(text, reportContext, options) {
+    options = getOptions(options);
+    options.modules = &#x27;jsrt&#x27;;
+    const templateMatcherJSRT = /&#x3c;template&#x3e;([^]*?)&#x3c;\/template&#x3e;/gm;
+    const code = text.replace(templateMatcherJSRT, (template, html) =&#x3e; convertRT(html, reportContext, options).replace(/;$/, &#x27;&#x27;));
+
+    return parseJS(code, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.reactTemplates.convertRT" id="apidoc.element.react-templates.reactTemplates.convertRT">
+        function <span class="apidocSignatureSpan">react-templates.reactTemplates.</span>convertRT
+        <span class="apidocSignatureSpan">(html, reportContext, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function convertRT(html, reportContext, options) {
+    options = getOptions(options);
+
+    const context = defaultContext(html, options, reportContext);
+    const body = parseAndConvertHtmlToReact(html, context);
+    const injectedFunctions = context.injectedFunctions.join(&#x27;\n&#x27;);
+    const statelessParams = context.stateless ? &#x27;props, context&#x27; : &#x27;&#x27;;
+    const renderFunction = `function(${statelessParams}) { ${injectedFunctions}return ${body} }`;
+
+    const requirePaths = _.map(context.defines, d =&#x3e; `&#x22;${d.moduleName}&#x22;`).join(&#x27;,&#x27;);
+    const requireNames = _.map(context.defines, d =&#x3e; `${d.alias}`).join(&#x27;,&#x27;);
+    const AMDArguments = _.map(context.defines, (d, i) =&#x3e; (d.member === &#x27;*&#x27; ? `${d.alias}` : `$${i}`)).join(&#x27;,&#x27;); //eslint-disable
+-line
+    const AMDSubstitutions = _.map(context.defines, (d, i) =&#x3e; (d.member === &#x27;*&#x27; ? null : `var ${d.alias} = $${i}.${d.member};`)).
+join(&#x27;\n&#x27;); //eslint-disable-line
+    const buildImport = reactSupport.buildImport[options.modules] || reactSupport.buildImport.commonjs;
+    const requires = _.map(context.defines, buildImport).join(&#x27;\n&#x27;);
+    const header = options.flow ? &#x27;/* @flow */\n&#x27; : &#x27;&#x27;;
+    const vars = header + requires;
+    const data = {
+        renderFunction,
+        requireNames,
+        requirePaths,
+        AMDArguments,
+        AMDSubstitutions,
+        vars,
+        name: options.name
+    };
+    let code = templates[options.modules](data);
+    if (options.modules !== &#x27;typescript&#x27; &#x26;&#x26; options.modules !== &#x27;jsrt&#x27;) {
+        code = parseJS(code, options);
+    }
+    return code;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.reactTemplates.convertTemplateToReact" id="apidoc.element.react-templates.reactTemplates.convertTemplateToReact">
+        function <span class="apidocSignatureSpan">react-templates.reactTemplates.</span>convertTemplateToReact
+        <span class="apidocSignatureSpan">(html, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function convertTemplateToReact(html, options) {
+    const context = require(&#x27;./context&#x27;);
+    return convertRT(html, context, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.reactTemplates.normalizeName" id="apidoc.element.react-templates.reactTemplates.normalizeName">
+        function <span class="apidocSignatureSpan">react-templates.reactTemplates.</span>normalizeName
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function normalizeName(name) {
+    return name.replace(/-/g, &#x27;_&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        fs.writeFileSync(target, out);
+    }
+    return;
+}
+const modules = options.modules || &#x27;none&#x27;;
+const shouldAddName = modules === &#x27;none&#x27; &#x26;&#x26; !options.name;
+if (shouldAddName) {
+    options.name = reactTemplates.<span class="apidocCodeKeywordSpan">normalizeName</span>(path.basename(source, path.extname(source
+))) + &#x27;RT&#x27;;
+}
+options.readFileSync = fsUtil.createRelativeReadFileSync(source);
+const js = modules === &#x27;jsrt&#x27; ? convertJSRTToJS(html, context, options) : convertRT(html, context, options);
+if (!options.dryRun) {
+    fs.writeFileSync(target, js);
+}
+if (shouldAddName) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-templates.rtStyle" id="apidoc.module.react-templates.rtStyle">module react-templates.rtStyle</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.rtStyle.convert" id="apidoc.element.react-templates.rtStyle.convert">
+        function <span class="apidocSignatureSpan">react-templates.rtStyle.</span>convert
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function convert(text) {
+    return templateCommonJSTemplate({body: convertBody(text)});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    context.verbose(`target file ${chalk.cyan(target)} is up to date, skipping`);
+    return;
+}
+
+const html = fs.readFileSync(source).toString();
+if (path.extname(source) === &#x27;.rts&#x27;) {
+    const rtStyle = require(&#x27;./rtStyle&#x27;);
+    const out = rtStyle.<span class="apidocCodeKeywordSpan">convert</span>(html);
+    if (!options.dryRun) {
+        fs.writeFileSync(target, out);
+    }
+    return;
+}
+const modules = options.modules || &#x27;none&#x27;;
+const shouldAddName = modules === &#x27;none&#x27; &#x26;&#x26; !options.name;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.rtStyle.convertBody" id="apidoc.element.react-templates.rtStyle.convertBody">
+        function <span class="apidocSignatureSpan">react-templates.rtStyle.</span>convertBody
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function convertBody(text) {
+    //source
+    const obj = css.parse(text, {silent: false});
+    const result = _.reduce(obj.stylesheet.rules, processRule2, {});
+    return JSON.stringify(result, undefined, 2);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-templates.shell" id="apidoc.module.react-templates.shell">module react-templates.shell</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.shell.printResults" id="apidoc.element.react-templates.shell.printResults">
+        function <span class="apidocSignatureSpan">react-templates.shell.</span>printResults
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function printResults(context) {
+    const warnings = context.getMessages();
+    const out = require(`./formatters/${context.options.format}`)(warnings);
+    context.report(out);
+    const grouped = _.groupBy(warnings, &#x27;level&#x27;);
+    return grouped.ERROR ? grouped.ERROR.length : 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        //         return glob.sync(`${fp}/**/*.rt`, {cwd: context.cwd});
+        //     }
+        //     return fp;
+        // });
+        const allFiles = _.flatMap(files, f =&#x3e; glob.sync(f, {cwd: context.cwd}));
+        // console.log(allFiles.length);
+        _.forEach(allFiles, handleSingleFile.bind(this, currentOptions));
+        ret = shell.<span class="apidocCodeKeywordSpan">printResults</span>(context);
+    } else {
+        console.log(options.generateHelp());
+    }
+    return ret;
+}
+
+function printVersions(currentOptions) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-templates.utils" id="apidoc.module.react-templates.utils">module react-templates.utils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.utils.addIfMissing" id="apidoc.element.react-templates.utils.addIfMissing">
+        function <span class="apidocSignatureSpan">react-templates.utils.</span>addIfMissing
+        <span class="apidocSignatureSpan">(array, obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function addIfMissing(array, obj) {
+    if (!_.includes(array, obj)) {
+        array.push(obj);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.utils.concatChildren" id="apidoc.element.react-templates.utils.concatChildren">
+        function <span class="apidocSignatureSpan">react-templates.utils.</span>concatChildren
+        <span class="apidocSignatureSpan">(children)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function concatChildren(children) {
+    let res = &#x27;&#x27;;
+    _.forEach(children, child =&#x3e; {
+        if (child &#x26;&#x26; !_.startsWith(child, &#x27; /*&#x27;)) {
+            res += &#x27;,&#x27;;
+        }
+        res += child;
+    });
+    return res;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+const children = _.map(node.children, child =&#x3e; {
+    const code = convertHtmlToReact(child, context);
+    validateJS(code, child, context);
+    return code;
+});
+
+data.children = utils.<span class="apidocCodeKeywordSpan">concatChildren</span>(children);
+
+if (node.name === virtualNode) { //eslint-disable-line wix-editor/prefer-ternary
+    data.body = `[${_.compact(children).join(&#x27;,&#x27;)}]`;
+} else {
+    data.body = _.template(getTagTemplateString(!hasNonSimpleChildren(node), reactSupport.shouldUseCreateElement(context)))(data
+);
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.utils.convertText" id="apidoc.element.react-templates.utils.convertText">
+        function <span class="apidocSignatureSpan">react-templates.utils.</span>convertText
+        <span class="apidocSignatureSpan">(node, context, txt, normalizeWhitespaces)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function convertText(node, context, txt, normalizeWhitespaces) {
+    function jsonText(text) {
+        return JSON.stringify(normalizeWhitespaces ? normalizeHtmlWhitespace(text) : text);
+    }
+    let res = &#x27;&#x27;;
+    let first = true;
+    const concatChar = node.type === &#x27;text&#x27; ? &#x27;,&#x27; : &#x27;+&#x27;;
+    while (_.includes(txt, &#x27;{&#x27;)) {
+        const start = txt.indexOf(&#x27;{&#x27;);
+        const pre = txt.substr(0, start);
+        if (pre) {
+            res += (first ? &#x27;&#x27; : concatChar) + jsonText(pre);
+            first = false;
+        }
+        let curlyCounter = 1;
+        let end = start;
+        while (++end &#x3c; txt.length &#x26;&#x26; curlyCounter &#x3e; 0) {
+            curlyCounter += curlyMap[txt.charAt(end)] || 0;
+        }
+        if (curlyCounter === 0) {
+            const needsParens = start !== 0 || end !== txt.length - 1;
+            res += (first ? &#x27;&#x27; : concatChar) + (needsParens ? &#x27;(&#x27; : &#x27;&#x27;) + txt.substr(start + 1, end - start - 2) + (needsParens ? &#x27;)&#x27; : &#x27;&#x27;);
+            first = false;
+            txt = txt.substr(end);
+        } else {
+            throw RTCodeError.build(context, node, `Failed to parse text &#x27;${txt}&#x27;`);
+        }
+    }
+    if (txt) {
+        res += (first ? &#x27;&#x27; : concatChar) + jsonText(txt);
+    }
+    if (res === &#x27;&#x27;) {
+        res = &#x27;true&#x27;;
+    }
+    return res;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        // Processing for both class and rt-class conveniently return strings that
+        // represent JS expressions, each evaluating to a space-separated set of class names.
+        // We can just join them with another space here.
+        const existing = props[propKey] ? `${props[propKey]} + &#x22; &#x22; + ` : &#x27;&#x27;;
+        if (key === classSetAttr) {
+            props[propKey] = existing + classSetTemplate({classSet: val});
+        } else if (key === classAttr || key === reactSupport.classNameProp) {
+            props[propKey] = existing + utils.<span class="apidocCodeKeywordSpan">convertText</span>(node, context, val.trim());
+        }
+    } else if (!_.startsWith(key, &#x27;rt-&#x27;)) {
+        props[propKey] = utils.convertText(node, context, val.trim());
+    }
+});
+_.assign(props, generateTemplateProps(node, context));
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.utils.isStringOnlyCode" id="apidoc.element.react-templates.utils.isStringOnlyCode">
+        function <span class="apidocSignatureSpan">react-templates.utils.</span>isStringOnlyCode
+        <span class="apidocSignatureSpan">(txt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isStringOnlyCode(txt) {
+    return /^\s*\{.*}\s*$/g.test(txt);
+    //txt = txt.trim();
+    //return txt.length &#x26;&#x26; txt.charAt(0) === &#x27;{&#x27; &#x26;&#x26; txt.charAt(txt.length - 1) === &#x27;}&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+function generateProps(node, context) {
+const props = {};
+_.forOwn(node.attribs, (val, key) =&#x3e; {
+    const propKey = reactSupport.attributesMapping[key.toLowerCase()] || key;
+    if (props.hasOwnProperty(propKey) &#x26;&#x26; propKey !== reactSupport.classNameProp) {
+        throw RTCodeError.build(context, node, `duplicate definition of ${propKey} ${JSON.stringify(node.attribs)}`);
+    }
+    if (_.startsWith(key, &#x27;on&#x27;) &#x26;&#x26; !utils.<span class="apidocCodeKeywordSpan">isStringOnlyCode</span>(val)) {
+        props[propKey] = handleEventHandler(val, context, node, key);
+    } else if (key === &#x27;style&#x27; &#x26;&#x26; !utils.isStringOnlyCode(val)) {
+        props[propKey] = handleStyleProp(val, node, context);
+    } else if (propKey === reactSupport.classNameProp) {
+        // Processing for both class and rt-class conveniently return strings that
+        // represent JS expressions, each evaluating to a space-separated set of class names.
+        // We can just join them with another space here.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.utils.normalizeName" id="apidoc.element.react-templates.utils.normalizeName">
+        function <span class="apidocSignatureSpan">react-templates.utils.</span>normalizeName
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function normalizeName(name) {
+    return name.replace(/-/g, &#x27;_&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        fs.writeFileSync(target, out);
+    }
+    return;
+}
+const modules = options.modules || &#x27;none&#x27;;
+const shouldAddName = modules === &#x27;none&#x27; &#x26;&#x26; !options.name;
+if (shouldAddName) {
+    options.name = reactTemplates.<span class="apidocCodeKeywordSpan">normalizeName</span>(path.basename(source, path.extname(source
+))) + &#x27;RT&#x27;;
+}
+options.readFileSync = fsUtil.createRelativeReadFileSync(source);
+const js = modules === &#x27;jsrt&#x27; ? convertJSRTToJS(html, context, options) : convertRT(html, context, options);
+if (!options.dryRun) {
+    fs.writeFileSync(target, js);
+}
+if (shouldAddName) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.utils.usesScopeName" id="apidoc.element.react-templates.utils.usesScopeName">
+        function <span class="apidocSignatureSpan">react-templates.utils.</span>usesScopeName
+        <span class="apidocSignatureSpan">(scopeNames, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function usesScopeName(scopeNames, node) {
+    function usesScope(root) {
+        return usesScopeName(scopeNames, root);
+    }
+    if (_.isEmpty(scopeNames)) {
+        return false;
+    }
+    // rt-if=&#x22;x&#x22;
+    if (node.type === &#x27;Identifier&#x27;) {
+        return _.includes(scopeNames, node.name);
+    }
+    // rt-if=&#x22;e({key1: value1})&#x22;
+    if (node.type === &#x27;Property&#x27;) {
+        return usesScope(node.value);
+    }
+    // rt-if=&#x22;e.x&#x22; or rt-if=&#x22;e1[e2]&#x22;
+    if (node.type === &#x27;MemberExpression&#x27;) {
+        return node.computed ? usesScope(node.object) || usesScope(node.property) : usesScope(node.object);
+    }
+    // rt-if=&#x22;!e&#x22;
+    if (node.type === &#x27;UnaryExpression&#x27;) {
+        return usesScope(node.argument);
+    }
+    // rt-if=&#x22;e1 || e2&#x22; or rt-if=&#x22;e1 | e2&#x22;
+    if (node.type === &#x27;LogicalExpression&#x27; || node.type === &#x27;BinaryExpression&#x27;) {
+        return usesScope(node.left) || usesScope(node.right);
+    }
+    // rt-if=&#x22;e1(e2, ... eN)&#x22;
+    if (node.type === &#x27;CallExpression&#x27;) {
+        return usesScope(node.callee) || _.some(node.arguments, usesScope);
+    }
+    // rt-if=&#x22;f({e1: e2})&#x22;
+    if (node.type === &#x27;ObjectExpression&#x27;) {
+        return _.some(node.properties, usesScope);
+    }
+    // rt-if=&#x22;e1[e2]&#x22;
+    if (node.type === &#x27;ArrayExpression&#x27;) {
+        return _.some(node.elements, usesScope);
+    }
+    return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    try {
+        ifAttributeTree = esprima.parse(node.attribs[ifAttr]);
+    } catch (e) {
+        throw new RTCodeError(e.message, e.index, -1);
+    }
+    if (ifAttributeTree &#x26;&#x26; ifAttributeTree.body &#x26;&#x26; ifAttributeTree.body.length === 1 &#x26;&#x26; ifAttributeTree
+.body[0].type === &#x27;ExpressionStatement&#x27;) {
+        // make sure that rt-if does not use an inner mapping
+        if (ifAttributeTree.body[0].expression &#x26;&#x26; utils.<span class="apidocCodeKeywordSpan">usesScopeName</span>(innerMappingKeys
+, ifAttributeTree.body[0].expression)) {
+            throw RTCodeError.buildFormat(context, node, &#x22;invalid scope mapping used in if part &#x27;%s&#x27;&#x22;, node.
+attribs[ifAttr]);
+        }
+    } else {
+        throw RTCodeError.buildFormat(context, node, &#x22;invalid if part &#x27;%s&#x27;&#x22;, node.attribs[ifAttr]);
+    }
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.utils.validate" id="apidoc.element.react-templates.utils.validate">
+        function <span class="apidocSignatureSpan">react-templates.utils.</span>validate
+        <span class="apidocSignatureSpan">(options, context, reportContext, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function validate(options, context, reportContext, node) {
+    if (node.type === &#x27;tag&#x27; &#x26;&#x26; node.attribs[&#x27;rt-if&#x27;] &#x26;&#x26; !node.attribs.key) {
+        const loc = rtError.getNodeLoc(context, node);
+        reportContext.warn(&#x27;rt-if without a key&#x27;, options.fileName, loc.pos.line, loc.pos.col, loc.start, loc.end);
+    }
+    if (node.type === &#x27;tag&#x27; &#x26;&#x26; node.attribs[&#x27;rt-require&#x27;] &#x26;&#x26; (node.attribs.dependency || node.attribs.as)) {
+        const loc = rtError.getNodeLoc(context, node);
+        reportContext.warn(&#x22;&#x27;rt-require&#x27; is obsolete, use &#x27;rt-import&#x27; instead&#x22;, options.fileName, loc.pos.line, loc.pos.col, loc
+.start, loc.end);
+    }
+    if (node.children) {
+        node.children.forEach(validate.bind(this, options, context, reportContext));
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+function parseAndConvertHtmlToReact(html, context) {
+const rootNode = cheerio.load(html, {
+    lowerCaseTags: false,
+    lowerCaseAttributeNames: false,
+    xmlMode: true,
+    withStartIndices: true
+});
+utils.<span class="apidocCodeKeywordSpan">validate</span>(context.options, context, context.reportContext, rootNode.root()[0]);
+let rootTags = _.filter(rootNode.root()[0].children, {type: &#x27;tag&#x27;});
+rootTags = handleSelfClosingHtmlTags(rootTags);
+if (!rootTags || rootTags.length === 0) {
+    throw new RTCodeError(&#x27;Document should have a root element&#x27;);
+}
+let firstTag = null;
+_.forEach(rootTags, tag =&#x3e; {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-templates.utils.validateJS" id="apidoc.element.react-templates.utils.validateJS">
+        function <span class="apidocSignatureSpan">react-templates.utils.</span>validateJS
+        <span class="apidocSignatureSpan">(code, node, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function validateJS(code, node, context) {
+    try {
+        esprima.parse(code);
+    } catch (e) {
+        throw RTCodeError.build(context, node, e.description);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
